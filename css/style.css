@@ -7,6 +7,7 @@
 }
 
 body {
+  height: 100vh;
   font-family: sans-serif;
   background: #76b852;
   /* fallback for old browsers */
@@ -31,19 +32,20 @@ body {
 }
 
 .image-container img {
+  max-height: 85VH;
   display: block;
   margin: 0 auto;
 }
 
 nav {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   border-radius: 15px;
   margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   width: 98%;
-  bottom: 5px;
+  bottom: 10px;
   background: #00C9FF;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -69,6 +71,11 @@ nav ul {
 }
 
 nav ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -99,7 +106,7 @@ nav ul li:hover input {
   display: block;
 }
 
-#change-img {
+#return-default, #change-img {
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
