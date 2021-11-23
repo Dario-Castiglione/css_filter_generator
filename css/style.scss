@@ -1,4 +1,5 @@
 * {
+    user-select: none;
     padding: 0;
     margin: 0;
     border: 0;
@@ -6,6 +7,7 @@
 }
 
 body{
+
     height: 100vh;
     font-family: sans-serif;
     background: #76b852;  /* fallback for old browsers */
@@ -26,7 +28,7 @@ background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, F
         margin-bottom: 0;
     }
     img{
-        max-height: 85VH;
+        max-height: 85vh;
         display: block;
         margin: 0 auto;
    }
