@@ -37,6 +37,7 @@ body {
 
 .image-container img {
   max-height: 85vh;
+  width: auto;
   display: block;
   margin: 0 auto;
 }
