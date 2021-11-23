@@ -85,3 +85,42 @@ nav{
 #return-default, #change-img{
     cursor: pointer;
 }
+
+@media all and (max-width: 1171px) {
+    ul li {
+        font-size: 16px;
+    }
+    }
+@media all and (max-width: 650px) {
+body{
+    nav{
+        
+        width: 100%;
+        bottom: 0;
+        border-radius: 0px;
+        ul{
+            height: 100px;
+            li{
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+    }
+    max-height: 100vh;
+    max-width: 100vw;
+    .image-container{
+        .image-shadow{
+            img{
+                max-width: 90vw;
+                max-height: 90vh;
+            }
+        }
+    }
+}
+
+}
