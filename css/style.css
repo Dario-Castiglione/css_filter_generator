@@ -76,6 +76,7 @@ nav ul {
 }
 
 nav ul li {
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
