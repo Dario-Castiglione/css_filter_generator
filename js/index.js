@@ -83,7 +83,9 @@ inputRange[7].addEventListener("input", (event)=>{
     changing()  
 })
 change.addEventListener("click", ()=>{
-    let newImg = prompt("inserisci url");
-    newImg == false ? image.src = "https://source.unsplash.com/random" : image.src = newImg
+    image.src= ""
+    console.log(image.src)
+    let newImg = prompt(`inserisci url`);
+    newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
 })
 tournDefault()
