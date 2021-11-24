@@ -8,6 +8,7 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     background: #212121;
+    height: 100vh;
 }
 button{
     color: #121212;
@@ -92,7 +93,16 @@ main{
 
 
 @media all and (max-width: 650px) {
-main{
+    ul{
+        height: 20vh;
+        overflow-x: hidden;
+    }
+    img{
+        height: 49vh;
+    }
+
+
+    main{
     flex-direction: column;
     height: auto;
     //max-width: 100vw;
@@ -106,13 +116,15 @@ main{
             }
         }
     }
+    
 }
-main :nth-child(2){
-    order: -1;
+//main :nth-child(2){
+  //  order: -1;
    // border: 1px solid red;
 
 }
-ul{
-    margin: 20px 0;
-}
-}
+//main  :nth-child(1) :nth-child(5){
+    //border: 1px solid red;
+    //order: -1;
+//}
+//}
