@@ -21,12 +21,41 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+@-webkit-keyframes push {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes push {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
 .image-container {
   padding: 20px;
   margin: 0 auto;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+.image-container p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  z-index: -1;
+  font-size: 3rem;
+  animation: push 0.7s infinite alternate-reverse ease-out;
 }
 
 .image-container .image-shadow {
@@ -53,8 +82,8 @@ nav {
   background: #E6DADA;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#3a4e53), to(#E6DADA));
-  background: linear-gradient(to left, #3a4e53, #E6DADA);
+  background: -webkit-gradient(linear, right top, left top, from(#3a4e539f), to(#e6dadaad));
+  background: linear-gradient(to left, #3a4e539f, #e6dadaad);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

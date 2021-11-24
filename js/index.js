@@ -86,6 +86,7 @@ change.addEventListener("click", ()=>{
     image.src= ""
     console.log(image.src)
     let newImg = prompt(`inserisci url`);
+    image.parentElement.style.height = ""
     newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
 })
 tournDefault()

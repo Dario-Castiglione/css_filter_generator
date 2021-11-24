@@ -15,7 +15,25 @@ body{
     background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
+@keyframes push{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
 .image-container{
+    p{
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-30%);
+        z-index: -1;
+        font-size: 3rem;
+        animation: push 0.7s infinite alternate-reverse ease-out;
+
+    }
     padding: 20px;
     margin: 0 auto;
     max-width: max-content;
@@ -44,8 +62,8 @@ nav{
     width: 100%;
     bottom: 0;
     background: #E6DADA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3a4e53, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3a4e53, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #3a4e539f, #e6dadaad);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a4e539f, #e6dadaad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     //opacity: 0.8;
    
