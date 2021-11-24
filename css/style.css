@@ -11,6 +11,7 @@
 }
 
 body {
+  font-family: 'Ubuntu', sans-serif;
   background: #212121;
 }
 
@@ -19,6 +20,8 @@ button {
   background: #1db954;
   padding: 8px 15px;
   font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
 }
 
 button:hover {
@@ -41,7 +44,6 @@ main {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 100vh;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   background: #212121;
 }
 
@@ -63,7 +65,7 @@ main ul li input {
 }
 
 main ul li label {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 5px;
   display: block;
 }
