@@ -28,7 +28,8 @@ function tournDefault(){
 returnDefault.addEventListener("click",tournDefault)
 
 const addMod = () =>{
-    filter=`blur(${blur}px) 
+    filter=`
+    blur(${blur}px) 
     brightness(${brightness}%)
     contrast(${contrast}%)
     grayscale(${grayscale}%)
@@ -89,4 +90,8 @@ change.addEventListener("click", ()=>{
     image.parentElement.style.height = ""
     newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
 })
+change.nextElementSibling.addEventListener("click", ()=>{
+    prompt("css = ",`filter:${filter}`)
+})
 tournDefault()
+
