@@ -5,7 +5,7 @@ const returnDefault = document.querySelector("#return-default")
 const copy = document.querySelector("#copy")
 
 
-let blur = 0;
+let blurs = 0;
 let brightness = 100;
 let contrast = 100;
 let grayscale = 0;
@@ -14,13 +14,21 @@ let saturate = 100;
 let sepia = 0;
 let invert = 0;
 function tournDefault(){
-    blur = 0;
+    inputRange[0].value="-1";
+    blurs = -1;
+    inputRange[1].value="100";
     brightness = 100;
+    inputRange[2].value="100";
     contrast = 100;
+    inputRange[3].value="0";
     grayscale = 0;
+    inputRange[4].value="0";
     hue_rotate = 0;
+    inputRange[5].value="100";
     saturate = 100;
+    inputRange[6].value="0";
     sepia = 0;
+    inputRange[7].value="0";
     invert = 0;
     changing()
 }
@@ -28,15 +36,7 @@ function tournDefault(){
 returnDefault.addEventListener("click",tournDefault)
 
 const addMod = () =>{
-    filter=`
-    blur(${blur}px) 
-    brightness(${brightness}%)
-    contrast(${contrast}%)
-    grayscale(${grayscale}%)
-    hue-rotate(${hue_rotate}deg)
-    invert(${invert}%)
-    saturate(${saturate}%)
-    sepia(${sepia}%)`
+    filter=`blur(${blurs}px) brightness(${brightness}%) contrast(${contrast}%) grayscale(${grayscale}%) hue-rotate(${hue_rotate}deg) invert(${invert}%) saturate(${saturate}%) sepia(${sepia}%)`
 }
 function changing(){
     image.style.filter = `${filter}`   
@@ -45,7 +45,7 @@ function changing(){
 let filter = ""
 
 inputRange[0].addEventListener("input", (event)=>{
-    blur = event.target.value 
+    blurs = event.target.value 
     changing()
 })
 
