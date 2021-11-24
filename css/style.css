@@ -119,12 +119,27 @@ main ul li label {
 }
 
 @media all and (max-width: 650px) {
-  ul {
-    height: 20vh;
-    overflow-x: hidden;
+  .image-container {
+    position: fixed;
+    top: 0;
+    height: 71vh;
+    background: #212121;
+    min-width: 100%;
   }
-  img {
-    height: 49vh;
+  .image-container img {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    max-height: 70vh;
+    max-width: 100vh;
+  }
+  ul {
+    margin-top: 50px;
+  }
+  main:first-child {
+    margin-top: 65vh;
   }
   main {
     -webkit-box-orient: vertical;
@@ -132,10 +147,6 @@ main ul li label {
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
-  }
-  main .image-container .image-shadow img {
-    max-width: 90vw;
-    max-height: 60vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
