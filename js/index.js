@@ -15,7 +15,7 @@ let sepia = 0;
 let invert = 0;
 function tournDefault(){
     inputRange[0].value="0";
-    blurs = 0;
+    blur = 0;
     inputRange[1].value="100";
     brightness = 100;
     inputRange[2].value="100";
