@@ -47,8 +47,8 @@ const addMod = () =>{
     sepia(${sepia}%)`
 }
 function changing(){
-    image.style.filter = `${filter}`   
     addMod()
+    image.style.filter = `${filter}`   
 }
 let filter = ""
 
