@@ -2,7 +2,7 @@ const image = document.querySelector("img")
 const inputRange = document.querySelectorAll("li input")
 const change = document.querySelector("#change-img")
 const returnDefault = document.querySelector("#return-default")
-
+const copy = document.querySelector("#copy")
 
 
 let blur = 0;
@@ -90,8 +90,7 @@ change.addEventListener("click", ()=>{
     image.parentElement.style.height = ""
     newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
 })
-change.nextElementSibling.addEventListener("click", ()=>{
-    prompt("css = ",`filter:${filter}`)
-})
-tournDefault()
 
+copy.addEventListener("click", ()=>{
+    prompt("css = ",`filter: ${filter}`)
+})

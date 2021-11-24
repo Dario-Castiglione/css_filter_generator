@@ -8,55 +8,61 @@
     <title>Foto Editor</title>
 </head>
 <body>
-    
+    <main>
+   
+    <ul>
+        <li>
+            <label for="blur">blur</label>
+        <input type="range" id="blur" name="blur" value="0" min="0" max="20">
+        </li>
+        <li>
+            <label for="brightess">brightess</label>
+        <input type="range" id="brightess" name="brightess" value="100"  min="10" max="200">
+        </li>
+        <li>
+            <label for="contrast">contrast</label>
+        <input type="range" id="contrast" name="contrast" value="100" min="0" max="200">
+        </li>
+        <li>
+            <label for="grayscale">grayscale</label>
+        <input type="range" id="grayscale" name="grayscale" value="0" min="0" max="100">
+            
+        </li>
+        <button id="return-default">return default</button>
+        </ul>
     <div class="image-container">
-        <p>Wait..</p>
+
             <div class="image-shadow">
             <img src="https://source.unsplash.com/random/900x1600" alt="">
         </div>
     </div>
-
-    
-    <nav> 
-        <ul>
-            <li id="return-default">return default</li>
+   
+           <ul>
+            <button id="copy">copy css</button>
             <li>
-            <input type="range" id="blur" name="blur" value="0" min="0" max="20">
-                <p>blur</p>
-            </li>
-            <li>
-            <input type="range" id="brightess" name="brightess" value="100"  min="10" max="200">
-                <p>brightess</p>
-            </li>
-            <li>
-            <input type="range" id="contrast" name="contrast" value="100" min="0" max="200">
-                <p>contrast</p>
-            </li>
-            <li>
-            <input type="range" id="grayscale" name="grayscale" value="0" min="0" max="100">
-                <p>grayscale</p>
-            </li>
-            <li>
+                <label for="hue-rotate">hue-rotate</label>
             <input type="range" id="hue-rotate" name="hue-rotate" value="0" min="0" max="360">
-                <p>hue-rotate</p>
+               
             </li>
             <li>
+                <label for="invert">invert</label>
             <input type="range" id="invert" name="invert" value="0" min="0" max="100">
-                <p>invert</p>
+                
             </li>
             <li>
+                <label for="saturate">saturate</label>
             <input type="range" id="saturate" name="saturate" value="100" min="0" max="200">
-                <p>saturate</p>
+                
             </li>
             <li>
+                <label for="sepia">sepia</label>
             <input type="range" id="sepia" name="sepia" min="0" max="100">
-                <p>sepia</p>
             </li>
-            <li id="change-img">change img</li>
-            <li id="copy">copy css</li>
+            <button id="change-img">change img</buttonid>
+            
 
         </ul>
-    </nav>
+    </main>
 
     <script src="./js/index.js"></script>
 </body>
