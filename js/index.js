@@ -4,31 +4,21 @@ const change = document.querySelector("#change-img")
 const returnDefault = document.querySelector("#return-default")
 const copy = document.querySelector("#copy")
 
-let blur = 0;
-let brightness = 100;
-let contrast = 100;
-let grayscale = 0;
-let hue_rotate = 0;
-let saturate = 100;
-let sepia = 0;
-let invert = 0;
+let blur = 0; let blur_default = 0;
+let brightness = 100; let brightness_default = 100;
+let contrast = 100; let contrast_default = 100;
+let grayscale = 0; let grayscale_default = 0;
+let hue_rotate = 0; let hue_rotate_default = 0;
+let saturate = 100; let saturate_default = 100;
+let sepia = 0; let sepia_default = 0;
+let invert = 0; let invert_default = 0;
 function tournDefault(){
-    inputRange[0].value="0";
-    blur = 0;
-    inputRange[1].value="100";
-    brightness = 100;
-    inputRange[2].value="100";
-    contrast = 100;
-    inputRange[3].value="0";
-    grayscale = 0;
-    inputRange[4].value="0";
-    hue_rotate = 0;
-    inputRange[5].value="0";
-    invert = 0;
-    inputRange[6].value="100";
-    saturate = 100;
-    inputRange[7].value="0";
+;
     sepia = 0;
+    for (x of inputRange){
+       x.value =  eval(`${x.id}`+"_default")
+       eval(`${x.id}`+"="+`${x.id}`+"_default")
+    }
     changing()
 }
 returnDefault.addEventListener("click",tournDefault)
