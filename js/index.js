@@ -57,6 +57,9 @@ change.addEventListener("click", ()=>{
     newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
 })
 
+
+
+addMod()
 copy.addEventListener("click", ()=>{
     prompt("css = ",`filter: ${filter}`)
 })
