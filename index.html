@@ -16,19 +16,19 @@
     <ul>
         <li>
             <label for="blur">blur</label>
-        <input type="range"  id="blur" name="blur" value="0" min="0" max="20">
+        <input type="range" data-default="0" id="blur" name="blur" value="0" min="0" max="20">
         </li>
         <li>
             <label for="brightess">brightness</label>
-        <input type="range" id="brightness" name="brightness" value="100"  min="10" max="200">
+        <input type="range" data-default="100" id="brightness" name="brightness" value="100"  min="10" max="200">
         </li>
         <li>
             <label for="contrast">contrast</label>
-        <input type="range" id="contrast" name="contrast" value="100" min="0" max="200">
+        <input type="range" data-default="100" id="contrast" name="contrast" value="100" min="0" max="200">
         </li>
         <li>
             <label for="grayscale">grayscale</label>
-        <input type="range" id="grayscale" name="grayscale" value="0" min="0" max="100">
+        <input type="range" data-default="0" id="grayscale" name="grayscale" value="0" min="0" max="100">
             
         </li>
         <button id="return-default">return default</button>
@@ -36,7 +36,7 @@
     <div class="image-container">
 
             <div class="image-shadow">
-            <img style="display:block" src="https://source.unsplash.com/random/900x1600" alt="">
+            <img src="https://source.unsplash.com/random/900x1600" alt="">
         </div>
     </div>
    
@@ -44,22 +44,22 @@
             <button id="copy">copy css</button>
             <li>
                 <label for="hue_rotate">hue-rotate</label>
-            <input type="range" id="hue_rotate" name="hue_rotate" value="0" min="0" max="360">
+            <input type="range" data-default="0" id="hue_rotate" name="hue_rotate" value="0" min="0" max="360">
                
             </li>
             <li>
                 <label for="invert">invert</label>
-            <input type="range" id="invert" name="invert" value="0" min="0" max="100">
+            <input type="range" data-default="0" id="invert" name="invert" value="0" min="0" max="100">
                 
             </li>
             <li>
                 <label for="saturate">saturate</label>
-            <input type="range" id="saturate" name="saturate" value="100" min="0" max="200">
+            <input type="range" data-default="100" id="saturate" name="saturate" value="100" min="0" max="200">
                 
             </li>
             <li>
                 <label for="sepia">sepia</label>
-            <input type="range" id="sepia" name="sepia" value="0" min="0" max="100">
+            <input type="range" data-default="0" id="sepia" name="sepia" value="0" min="0" max="100">
             </li>
             <button id="change-img">change img</buttonid>
             
