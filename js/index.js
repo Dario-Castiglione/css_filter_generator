@@ -4,7 +4,6 @@ const change = document.querySelector("#change-img")
 const returnDefault = document.querySelector("#return-default")
 const copy = document.querySelector("#copy")
 
-
 let blur = 0;
 let brightness = 100;
 let contrast = 100;
@@ -32,65 +31,24 @@ function tournDefault(){
     sepia = 0;
     changing()
 }
-
 returnDefault.addEventListener("click",tournDefault)
 
 const addMod = () =>{
-    filter=`
-    blur(${blur}px) 
-    brightness(${brightness}%)
-    contrast(${contrast}%)
-    grayscale(${grayscale}%)
-    hue-rotate(${hue_rotate}deg)
-    invert(${invert}%)
-    saturate(${saturate}%)
-    sepia(${sepia}%)`
+    filter=`blur(${blur}px) brightness(${brightness}%) contrast(${contrast}%) grayscale(${grayscale}%) hue-rotate(${hue_rotate}deg) invert(${invert}%) saturate(${saturate}%) sepia(${sepia}%)`
 }
 function changing(){
     addMod()
     image.style.filter = `${filter}`   
 }
 let filter = ""
-
-inputRange[0].addEventListener("input", (event)=>{
-    blur = event.target.value 
+for (x of inputRange){
+    x.addEventListener("input", (event) =>{
+    eval(`${event.target.id}`+ "=" + `${event.target.value}`)
+    console.log(event.target.key)
     changing()
-})
+    })
+}
 
-inputRange[1].addEventListener("input", (event)=>{
-    brightness = event.target.value 
-    changing()    
-})
-
-inputRange[2].addEventListener("input", (event)=>{
-    contrast = event.target.value 
-    changing()    
-})
-
-inputRange[3].addEventListener("input", (event)=>{
-    grayscale = event.target.value 
-    changing()    
-})
-
-inputRange[4].addEventListener("input", (event)=>{
-    hue_rotate = event.target.value 
-    changing()    
-})
-
-inputRange[5].addEventListener("input", (event)=>{
-    invert = event.target.value 
-    changing()    
-})
-
-inputRange[6].addEventListener("input", (event)=>{
-    saturate = event.target.value 
-    changing()   
-})
-
-inputRange[7].addEventListener("input", (event)=>{
-    sepia = event.target.value 
-    changing()  
-})
 change.addEventListener("click", ()=>{
     image.src= ""
     console.log(image.src)
