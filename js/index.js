@@ -40,7 +40,6 @@ for (x of inputRange) {
 }
 change.addEventListener("click", () => {
     image.src = ""
-    //console.log(image.src)
     let newImg = prompt(`inserisci url`);
     image.parentElement.style.height = ""
     newImg == false ? image.src = "https://source.unsplash.com/random/900x1600" : image.src = newImg
@@ -53,7 +52,6 @@ copy.addEventListener("click", () => {
 document.querySelector('#save').addEventListener('click', function() {
     html2canvas(document.body, {
         onrendered: function(canvas) {
-            // document.body.appendChild(canvas);
           return Canvas2Image.saveAsPNG(canvas);
         }
     });
