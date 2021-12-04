@@ -4,6 +4,7 @@ const change = document.querySelector("#change-img")
 const returnDefault = document.querySelector("#return-default")
 const copy = document.querySelector("#copy")
 
+
 let blur = 0;
 let brightness = 100;
 let contrast = 100;
@@ -17,10 +18,10 @@ function tournDefault() {
     for (x of inputRange) {
         x.value = eval(`${x.dataset.default}`)
         eval(`${x.id}` + "=" + `${x.dataset.default}`)
-
     }
     changing()
 }
+
 returnDefault.addEventListener("click", tournDefault)
 
 const addMod = () => {
@@ -33,7 +34,7 @@ function changing() {
 let filter = ""
 for (x of inputRange) {
     x.addEventListener("input", (event) => {
-        eval(`${event.target.id}` + "=" + `${event.target.value}`)
+       eval(`${event.target.id}` + "=" + `${event.target.value}`)
         changing()
     })
 }
@@ -48,3 +49,12 @@ addMod()
 copy.addEventListener("click", () => {
     prompt("css = ", `filter: ${filter}`)
 })
+
+document.querySelector('#save').addEventListener('click', function() {
+    html2canvas(document.body, {
+        onrendered: function(canvas) {
+            // document.body.appendChild(canvas);
+          return Canvas2Image.saveAsPNG(canvas);
+        }
+    });
+});
