@@ -49,10 +49,3 @@ copy.addEventListener("click", () => {
     prompt("css = ", `filter: ${filter}`)
 })
 
-document.querySelector('#save').addEventListener('click', function() {
-    html2canvas(document.body, {
-        onrendered: function(canvas) {
-          return Canvas2Image.saveAsPNG(canvas);
-        }
-    });
-});
